@@ -1,0 +1,21 @@
+{
+  "name": "M.A.R.I.O. Autonomous OS",
+  "short_name": "MARIO",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050508",
+  "theme_color": "#050508",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://api.iconify.design/ri:shield-flash-line.svg?color=%23e6b800",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "https://api.iconify.design/ri:shield-flash-line.svg?color=%23e6b800",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
