@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>M.A.R.I.O. // Autonomous Core</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Ambient Hologram Matrix -->
+  <div class="holo-grid"></div>
+  <div class="scanlines"></div>
+
+  <!-- Master Container -->
+  <main class="os-container">
+    
+    <!-- Top System Diagnostic Bar -->
+    <header class="sys-bar">
+      <div class="sys-id">
+        <span class="pulsar"></span>
+        <span class="sys-title">M.A.R.I.O. // OS-V1</span>
+      </div>
+      <div class="sys-stats">
+        <span id="security-state" class="badge locked">LOCKED</span>
+        <span id="net-state" class="badge">PRO CORE</span>
+      </div>
+    </header>
+
+    <!-- Central Arc Reactor / Visualizer HUD -->
+    <section class="core-stage">
+      <div class="arc-reactor" id="reactor-trigger">
+        <div class="core-ring outer"></div>
+        <div class="core-ring mid"></div>
+        <div class="core-ring inner"></div>
+        <canvas id="visualizer-canvas"></canvas>
+        <div class="core-center">
+          <span class="core-glyph">ᛗ</span>
+        </div>
+      </div>
+      <div class="status-readout" id="status-text">INITIALIZING QUANTUM BRAIN...</div>
+    </section>
+
+    <!-- Navigation Deck -->
+    <nav class="nav-deck">
+      <button class="deck-btn active" data-tab="hud-tab">HUD</button>
+      <button class="deck-btn" data-tab="chat-tab">NEURAL CHAT</button>
+      <button class="deck-btn" data-tab="vault-tab">SHADOW VAULT</button>
+      <button class="deck-btn" data-tab="system-tab">CONFIG</button>
+    </nav>
+
+    <!-- Tab 1: Live Voice Actions & Status -->
+    <section class="tab-pane active" id="hud-tab">
+      <div class="telemetry-grid">
+        <div class="telemetry-card">
+          <h4>VOICE ENGINE</h4>
+          <p id="voice-status">Awaiting Wake Phrase...</p>
+        </div>
+        <div class="telemetry-card">
+          <h4>PRESENCE PROTOCOL</h4>
+          <p id="presence-status">Biometric Shield Armed</p>
+        </div>
+      </div>
+      <div class="action-dock">
+        <button class="action-btn" id="voice-toggle">INITIALIZE VOICE LINK</button>
+      </div>
+    </section>
+
+    <!-- Tab 2: Neural Console & Dictation Vault -->
+    <section class="tab-pane" id="chat-tab">
+      <div class="terminal-feed" id="terminal-feed">
+        <div class="msg mario-msg">
+          <span class="speaker">MARIO:</span> All neural subroutines online, Boss. Awaiting input.
+        </div>
+      </div>
+      <div class="terminal-bar">
+        <input type="text" id="terminal-input" placeholder="Transmit direct neural command...">
+        <button id="terminal-send" class="terminal-btn">EXECUTE</button>
+      </div>
+    </section>
+
+    <!-- Tab 3: Shadow Vault (Infinite Memory Logs) -->
+    <section class="tab-pane" id="vault-tab">
+      <div class="vault-header">
+        <h3>CHRONO-DATABASE // INFINITE MEMORY</h3>
+      </div>
+      <div class="memory-logs" id="memory-logs">
+        <div class="memory-entry">
+          <span class="mem-time">[CORE INITIALIZED]</span>
+          <p>Database created with AES-Zero local encryption.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 4: System Config (BYOK Keys & Passphrase) -->
+    <section class="tab-pane" id="system-tab">
+      <div class="config-form">
+        <label>GEMINI API KEY (PRO/FLASH)</label>
+        <input type="password" id="gemini-key" placeholder="AIzaSy...">
+
+        <label>CLAUDE / OPENAI KEY (OPTIONAL)</label>
+        <input type="password" id="aux-key" placeholder="sk-...">
+
+        <label>CUSTOM WAKE-WORD</label>
+        <input type="text" id="wake-word" value="Mario">
+
+        <label>SECURITY PASSPHRASE</label>
+        <input type="text" id="passphrase" value="Eternity is great">
+
+        <button class="action-btn gold" id="save-config">ARM PROTOCOLS & SAVE</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="mario-core.js"></script>
+</body>
+</html>
